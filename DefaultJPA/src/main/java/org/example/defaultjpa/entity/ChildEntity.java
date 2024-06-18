@@ -13,15 +13,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "my_entities2")
-public class Entity2 {
+@Table(name = "child_entities")
+public class ChildEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "entity1_id")
-    private Entity1 entity1;  // This is the owning side
+    @JoinColumn(name = "parent_entity_id")
+    private ParentEntity parentEntity;  // This is the owning side
 }
