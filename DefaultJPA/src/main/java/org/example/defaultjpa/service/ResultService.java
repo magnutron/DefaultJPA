@@ -119,6 +119,8 @@ public class ResultService {
         if (result.getDiscipline() != null) {
             DisciplineDto disciplineDto = new DisciplineDto();
             disciplineDto.setId(result.getDiscipline().getId());
+            disciplineDto.setName(result.getDiscipline().getName());
+            disciplineDto.setResultType(result.getDiscipline().getResultType());
             resultDto.setDiscipline(disciplineDto);
         }
 
