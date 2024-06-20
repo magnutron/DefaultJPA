@@ -1,4 +1,4 @@
-package org.example.defaultjpa.api;
+package org.example.defaultjpa.controller;
 
 import org.example.defaultjpa.dto.ParentEntityDto;
 import org.example.defaultjpa.service.ParentEntityService;
@@ -27,5 +27,10 @@ public class ParentEntityController {
     @DeleteMapping("/{id}")
     public void deleteParentEntity(@PathVariable Integer id) {
         parentEntityService.deleteParentEntity(id);
+    }
+
+    @PutMapping("/{id}")
+    public ParentEntityDto updateParentEntity(@PathVariable Integer id, @RequestBody ParentEntityDto parentEntityDto) {
+        return parentEntityService.updateParentEntity(id, parentEntityDto);
     }
 }

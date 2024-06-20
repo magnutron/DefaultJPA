@@ -1,11 +1,11 @@
-package org.example.defaultjpa.api;
+package org.example.defaultjpa.controller;
 
 import org.example.defaultjpa.dto.ChildEntityDto;
 import org.example.defaultjpa.service.ChildEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/child-entities")
@@ -15,17 +15,27 @@ public class ChildEntityController {
     private ChildEntityService childEntityService;
 
     @GetMapping
-    public List<ChildEntityDto> findAllChildEntities() {
+    public Set<ChildEntityDto> findAllChildEntities() {
         return childEntityService.findAllChildEntities();
     }
 
-    @PostMapping
-    public ChildEntityDto addChildEntity(@RequestBody ChildEntityDto childEntityDto) {
-        return childEntityService.addChildEntity(childEntityDto);
+    @GetMapping("/{parentId}")
+    public Set<ChildEntityDto> findAllChildEntitiesByParentId(@PathVariable Integer parentId) {
+        return childEntityService.findAllChildEntitiesByParentId(parentId);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteChildEntity(@PathVariable Integer id) {
-        childEntityService.deleteChildEntity(id);
+    @PostMapping("/{parentId}")
+    public ChildEntityDto addChildEntity(@PathVariable Integer parentId, @RequestBody ChildEntityDto childEntityDto) {
+        return childEntityService.addChildEntity(parentId, childEntityDto);
+    }
+
+    @DeleteMapping("/{parentId}/{childId}")
+    public void deleteChildEntity(@PathVariable Integer parentId, @PathVariable Integer childId) {
+        childEntityService.deleteChildEntity(parentId, childId);
+    }
+
+    @PutMapping("/{parentId}/{childId}")
+    public ChildEntityDto updateChildEntity(@PathVariable Integer parentId, @PathVariable Integer childId, @RequestBody ChildEntityDto childEntityDto) {
+        return childEntityService.updateChildEntity(parentId, childId, childEntityDto);
     }
 }

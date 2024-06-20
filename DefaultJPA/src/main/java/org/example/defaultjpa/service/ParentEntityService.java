@@ -19,13 +19,14 @@ public class ParentEntityService {
     private ParentEntityRepository parentEntityRepository;
 
     public List<ParentEntityDto> findAllParentEntities() {
-        return parentEntityRepository.findAll().stream().map(this::convertToDto).collect(Collectors.toList());
+        return parentEntityRepository.findAll().stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList());
     }
 
     public ParentEntityDto addParentEntity(ParentEntityDto parentEntityDto) {
         ParentEntity parentEntity = new ParentEntity();
         parentEntity.setName(parentEntityDto.getName());
-        // Add logic to convert and set child entities if needed
 
         parentEntity = parentEntityRepository.save(parentEntity);
         return convertToDto(parentEntity);
@@ -33,6 +34,28 @@ public class ParentEntityService {
 
     public void deleteParentEntity(Integer id) {
         parentEntityRepository.deleteById(id);
+    }
+
+    public ParentEntityDto updateParentEntity(Integer id, ParentEntityDto parentEntityDto) {
+        ParentEntity parentEntity = parentEntityRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Parent entity not found"));
+        parentEntity.setName(parentEntityDto.getName());
+
+        // Clear the existing child entities and set the updated ones
+        ParentEntity finalParentEntity = parentEntity;
+        Set<ChildEntity> updatedChildEntities = parentEntityDto.getChildEntities().stream()
+                .map(childEntityDto -> {
+                    ChildEntity childEntity = new ChildEntity();
+                    childEntity.setName(childEntityDto.getName());
+                    childEntity.setParentEntity(finalParentEntity); // Use effectively final variable
+                    return childEntity;
+                }).collect(Collectors.toSet());
+
+        parentEntity.getChildEntities().clear();
+        parentEntity.getChildEntities().addAll(updatedChildEntities);
+
+        parentEntity = parentEntityRepository.save(parentEntity);
+        return convertToDto(parentEntity);
     }
 
     private ParentEntityDto convertToDto(ParentEntity parentEntity) {
@@ -51,6 +74,7 @@ public class ParentEntityService {
         ChildEntityDto childEntityDto = new ChildEntityDto();
         childEntityDto.setId(childEntity.getId());
         childEntityDto.setName(childEntity.getName());
+        childEntityDto.setParentEntityId(childEntity.getParentEntity().getId());
         return childEntityDto;
     }
 }

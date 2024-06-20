@@ -18,6 +18,6 @@ public class ParentEntity {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "parentEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "parentEntity", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<ChildEntity> childEntities = new HashSet<>();
 }

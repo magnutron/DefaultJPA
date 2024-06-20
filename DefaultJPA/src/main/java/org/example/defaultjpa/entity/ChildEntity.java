@@ -1,12 +1,6 @@
 package org.example.defaultjpa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,5 +17,5 @@ public class ChildEntity {
 
     @ManyToOne
     @JoinColumn(name = "parent_entity_id")
-    private ParentEntity parentEntity;  // This is the owning side
+    private ParentEntity parentEntity;
 }
