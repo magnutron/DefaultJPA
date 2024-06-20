@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea04837f-a311-4032-863b-fa691500acc5" name="Changes" comment="" />
+    <list default="true" id="ea04837f-a311-4032-863b-fa691500acc5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/api/DisciplineController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/api/ParticipantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/api/ResultController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/DisciplineDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/ParticipantDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/ResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Discipline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Participant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/enums/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/DisciplineRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ParticipantRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ResultRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/DisciplineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ParticipantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ResultService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/resources/h2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/resources/sql.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DefaultJPA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DefaultJPA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/api/ChildEntityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/api/ParentEntityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/ChildEntityDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/ParentEntityDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/ChildEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/ParentEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ChildEntityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ParentEntityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ChildEntityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ParentEntityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/resources/Data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2i2sGpmpLzpM9Ta78MkxA2A9XSG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,18 +71,40 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DefaultJpaApplication.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/MagnuTron/Documents/GitHub/DefaultJPA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="DefaultJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="DefaultJPA" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.defaultjpa.DefaultJpaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -44,6 +117,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718699915186</updated>
       <workItem from="1718699916328" duration="128000" />
+      <workItem from="1718866618395" duration="225000" />
+      <workItem from="1718866853007" duration="21762000" />
     </task>
     <servers />
   </component>
