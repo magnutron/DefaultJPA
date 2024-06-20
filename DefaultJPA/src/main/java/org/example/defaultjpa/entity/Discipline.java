@@ -1,10 +1,12 @@
 package org.example.defaultjpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -19,9 +21,9 @@ public class Discipline {
     private String name;
     private String resultType;
 
-    @OneToMany(mappedBy = "discipline")
-    @JsonBackReference
-    private Set<Result> results;
+    @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private Set<Result> results = new HashSet<>();
 
     @ManyToMany(mappedBy = "disciplines")
     @JsonBackReference

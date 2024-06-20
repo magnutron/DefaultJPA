@@ -12,6 +12,5 @@ public class DisciplineDto {
     private Long id;
     private String name;
     private String resultType;
-    private Set<ResultDto> results;
-    private Set<ParticipantDto> participants;
+
 }

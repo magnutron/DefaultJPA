@@ -1,5 +1,6 @@
 package org.example.defaultjpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,14 +17,14 @@ public class Result {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "participant_id", nullable = false)
-    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "participant_id")
+    @JsonIgnoreProperties("results")
     private Participant participant;
 
-    @ManyToOne
-    @JoinColumn(name = "discipline_id", nullable = false)
-    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "discipline_id")
+    @JsonIgnoreProperties("results")
     private Discipline discipline;
 
     private String resultValue;

@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ea04837f-a311-4032-863b-fa691500acc5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/DisciplineDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/DisciplineDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/ParticipantDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/ParticipantDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Discipline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Participant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/DisciplineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/DisciplineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ParticipantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ParticipantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/repository/ResultRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ParticipantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ResultService.java" afterDir="false" />
     </list>
@@ -35,28 +40,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.DefaultJpaApplication.executor": "Run",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/MagnuTron/Documents/GitHub/DefaultJPA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DefaultJpaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MagnuTron/Documents/GitHub/DefaultJPA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DefaultJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />

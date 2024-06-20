@@ -1,5 +1,6 @@
 package org.example.defaultjpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
@@ -8,6 +9,7 @@ import org.example.defaultjpa.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -42,6 +44,6 @@ public class Participant {
     private Set<Discipline> disciplines;
 
     @OneToMany(mappedBy = "participant", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @JsonIgnore
     private Set<Result> results;
 }
