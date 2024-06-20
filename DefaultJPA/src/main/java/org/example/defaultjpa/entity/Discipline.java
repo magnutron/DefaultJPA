@@ -3,6 +3,7 @@ package org.example.defaultjpa.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import java.util.Set;
 
@@ -19,8 +20,10 @@ public class Discipline {
     private String resultType;
 
     @OneToMany(mappedBy = "discipline")
+    @JsonBackReference
     private Set<Result> results;
 
     @ManyToMany(mappedBy = "disciplines")
+    @JsonBackReference
     private Set<Participant> participants;
 }

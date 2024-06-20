@@ -1,8 +1,6 @@
 package org.example.defaultjpa.service;
 
-import org.example.defaultjpa.dto.DisciplineDto;
-import org.example.defaultjpa.dto.ParticipantDto;
-import org.example.defaultjpa.dto.ResultDto;
+import org.example.defaultjpa.dto.*;
 import org.example.defaultjpa.entity.Discipline;
 import org.example.defaultjpa.entity.Participant;
 import org.example.defaultjpa.entity.Result;
@@ -12,7 +10,9 @@ import org.example.defaultjpa.repository.ParticipantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -54,9 +54,9 @@ public class ParticipantService {
         participant.setDisciplines(participantDto.getDisciplines().stream()
                 .map(this::convertDisciplineToEntity)
                 .collect(Collectors.toSet()));
-        participant.setResults(participantDto.getResults().stream()
+        participant.setResults(participantDto.getResults() != null ? participantDto.getResults().stream()
                 .map(this::convertResultToEntity)
-                .collect(Collectors.toSet()));
+                .collect(Collectors.toSet()) : new HashSet<>());
 
         Participant updatedParticipant = participantRepository.save(participant);
         return convertParticipantToDto(updatedParticipant);
@@ -91,12 +91,12 @@ public class ParticipantService {
         participant.setGender(participantDto.getGender());
         participant.setDateOfBirth(participantDto.getDateOfBirth());
         participant.setClub(participantDto.getClub());
-        participant.setDisciplines(participantDto.getDisciplines().stream()
+        participant.setDisciplines(participantDto.getDisciplines() != null ? participantDto.getDisciplines().stream()
                 .map(this::convertDisciplineToEntity)
-                .collect(Collectors.toSet()));
-        participant.setResults(participantDto.getResults().stream()
+                .collect(Collectors.toSet()) : new HashSet<>());
+        participant.setResults(participantDto.getResults() != null ? participantDto.getResults().stream()
                 .map(this::convertResultToEntity)
-                .collect(Collectors.toSet()));
+                .collect(Collectors.toSet()) : new HashSet<>());
         return participant;
     }
 
@@ -105,7 +105,6 @@ public class ParticipantService {
         disciplineDto.setId(discipline.getId());
         disciplineDto.setName(discipline.getName());
         disciplineDto.setResultType(discipline.getResultType());
-        // Not including participants and results to avoid circular references and performance issues.
         return disciplineDto;
     }
 
@@ -114,7 +113,6 @@ public class ParticipantService {
         discipline.setId(disciplineDto.getId());
         discipline.setName(disciplineDto.getName());
         discipline.setResultType(disciplineDto.getResultType());
-        // Not including participants and results to avoid circular references and performance issues.
         return discipline;
     }
 

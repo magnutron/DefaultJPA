@@ -42,7 +42,18 @@ public class ResultService {
     }
 
     public ResultDto createResult(ResultDto resultDto) {
-        Result result = convertResultToEntity(resultDto);
+        Result result = new Result();
+        result.setResultValue(resultDto.getResultValue());
+        result.setDate(resultDto.getDate());
+
+        Participant participant = participantRepository.findById(resultDto.getParticipant().getId())
+                .orElseThrow(() -> new ResourceNotFoundException("Participant not found"));
+        result.setParticipant(participant);
+
+        Discipline discipline = disciplineRepository.findById(resultDto.getDiscipline().getId())
+                .orElseThrow(() -> new ResourceNotFoundException("Discipline not found"));
+        result.setDiscipline(discipline);
+
         Result savedResult = resultRepository.save(result);
         return convertResultToDto(savedResult);
     }
@@ -73,8 +84,8 @@ public class ResultService {
         resultDto.setId(result.getId());
         resultDto.setResultValue(result.getResultValue());
         resultDto.setDate(result.getDate());
-        resultDto.setDiscipline(convertDisciplineToDto(result.getDiscipline()));
         resultDto.setParticipant(convertParticipantToDto(result.getParticipant()));
+        resultDto.setDiscipline(convertDisciplineToDto(result.getDiscipline()));
         return resultDto;
     }
 

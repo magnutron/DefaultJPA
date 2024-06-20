@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.defaultjpa.enums.Gender;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -37,8 +38,10 @@ public class Participant {
             joinColumns = @JoinColumn(name = "participant_id"),
             inverseJoinColumns = @JoinColumn(name = "discipline_id")
     )
+    @JsonManagedReference
     private Set<Discipline> disciplines;
 
     @OneToMany(mappedBy = "participant", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private Set<Result> results;
 }
