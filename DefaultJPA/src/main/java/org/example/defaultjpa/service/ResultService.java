@@ -121,6 +121,7 @@ public class ResultService {
             disciplineDto.setId(result.getDiscipline().getId());
             disciplineDto.setName(result.getDiscipline().getName());
             disciplineDto.setResultType(result.getDiscipline().getResultType());
+            disciplineDto.setSortingDirection(result.getDiscipline().getSortingDirection().toString());
             resultDto.setDiscipline(disciplineDto);
         }
 

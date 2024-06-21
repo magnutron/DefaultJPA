@@ -4,6 +4,7 @@ package org.example.defaultjpa.service;
 import org.example.defaultjpa.dto.DisciplineDto;
 import org.example.defaultjpa.entity.Discipline;
 import org.example.defaultjpa.entity.Participant;
+import org.example.defaultjpa.enums.SortingDirection;
 import org.example.defaultjpa.exception.ResourceNotFoundException;
 import org.example.defaultjpa.repository.DisciplineRepository;
 import org.example.defaultjpa.repository.ParticipantRepository;
@@ -71,6 +72,7 @@ public class DisciplineService {
         disciplineDto.setId(discipline.getId());
         disciplineDto.setName(discipline.getName());
         disciplineDto.setResultType(discipline.getResultType());
+        disciplineDto.setSortingDirection(discipline.getSortingDirection().toString());
         return disciplineDto;
     }
 
@@ -79,6 +81,7 @@ public class DisciplineService {
         discipline.setId(disciplineDto.getId());
         discipline.setName(disciplineDto.getName());
         discipline.setResultType(disciplineDto.getResultType());
+        discipline.setSortingDirection(SortingDirection.valueOf(disciplineDto.getSortingDirection()));
         return discipline;
     }
 }

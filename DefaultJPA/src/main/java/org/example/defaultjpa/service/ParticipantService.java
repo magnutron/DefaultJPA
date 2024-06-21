@@ -41,7 +41,7 @@ public class ParticipantService {
     }
 
     public ParticipantDto createParticipant(ParticipantDto participantDto) {
-        Participant participant = convertParticipantToEntity(participantDto);
+        Participant participant = convertPartToEntity(participantDto);
         participant = participantRepository.save(participant);
         return convertParticipantToDto(participant);
     }
@@ -51,7 +51,7 @@ public class ParticipantService {
     }
 
     public ParticipantDto updateParticipant(Long id, ParticipantDto participantDto) {
-        Participant participant = convertParticipantToEntity(participantDto);
+        Participant participant = convertPartToEntity(participantDto);
         participant.setId(id);
         participant = participantRepository.save(participant);
         return convertParticipantToDto(participant);
@@ -59,7 +59,7 @@ public class ParticipantService {
 
 
 
-    private Participant convertParticipantToEntity(ParticipantDto participantDto) {
+    private Participant convertPartToEntity(ParticipantDto participantDto) {
         Participant participant = new Participant();
         participant.setName(participantDto.getName());
         participant.setGender(Gender.valueOf(participantDto.getGender()));

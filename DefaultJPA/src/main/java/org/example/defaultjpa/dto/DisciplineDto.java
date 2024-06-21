@@ -12,5 +12,6 @@ public class DisciplineDto {
     private Long id;
     private String name;
     private String resultType;
+    private String sortingDirection;
 
 }

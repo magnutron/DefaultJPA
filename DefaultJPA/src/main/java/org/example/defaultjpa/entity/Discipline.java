@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.example.defaultjpa.enums.SortingDirection;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +21,9 @@ public class Discipline {
 
     private String name;
     private String resultType;
+
+    @Enumerated(EnumType.STRING)
+    private SortingDirection sortingDirection; // Add this line
 
     @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore

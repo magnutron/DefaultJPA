@@ -5,6 +5,7 @@ import org.example.defaultjpa.entity.Discipline;
 import org.example.defaultjpa.entity.Participant;
 import org.example.defaultjpa.entity.Result;
 import org.example.defaultjpa.enums.Gender;
+import org.example.defaultjpa.enums.SortingDirection;
 import org.example.defaultjpa.repository.DisciplineRepository;
 import org.example.defaultjpa.repository.ParticipantRepository;
 import org.example.defaultjpa.repository.ResultRepository;
@@ -36,12 +37,14 @@ public class InitData {
     public void init() {
         Discipline discipline1 = new Discipline();
         discipline1.setName("100m Sprint");
-        discipline1.setResultType("Time");
+        discipline1.setResultType("Seconds");
+        discipline1.setSortingDirection(SortingDirection.ASCENDING);
         disciplineRepository.save(discipline1);
 
         Discipline discipline2 = new Discipline();
         discipline2.setName("Long Jump");
-        discipline2.setResultType("Distance");
+        discipline2.setResultType("Meters");
+        discipline2.setSortingDirection(SortingDirection.DESCENDING);
         disciplineRepository.save(discipline2);
 
         Participant participant1 = new Participant();
