@@ -48,6 +48,7 @@ public class DisciplineService {
 
         discipline.setName(disciplineDto.getName());
         discipline.setResultType(disciplineDto.getResultType());
+        discipline.setSortingDirection(SortingDirection.valueOf(disciplineDto.getSortingDirection()));
 
         Discipline updatedDiscipline = disciplineRepository.save(discipline);
         return convertToDto(updatedDiscipline);
