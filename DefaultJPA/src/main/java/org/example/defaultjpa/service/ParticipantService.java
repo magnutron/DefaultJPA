@@ -30,20 +30,20 @@ public class ParticipantService {
 
     public List<ParticipantDto> getAllParticipants() {
         return participantRepository.findAll().stream()
-                .map(this::convertParticipantToDto)
+                .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
 
     public ParticipantDto getParticipantById(Long id) {
         Participant participant = participantRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid participant ID: " + id));
-        return convertParticipantToDto(participant);
+        return convertToDto(participant);
     }
 
     public ParticipantDto createParticipant(ParticipantDto participantDto) {
-        Participant participant = convertPartToEntity(participantDto);
+        Participant participant = convertToEntity(participantDto);
         participant = participantRepository.save(participant);
-        return convertParticipantToDto(participant);
+        return convertToDto(participant);
     }
 
     public void deleteParticipant(Long id) {
@@ -51,15 +51,15 @@ public class ParticipantService {
     }
 
     public ParticipantDto updateParticipant(Long id, ParticipantDto participantDto) {
-        Participant participant = convertPartToEntity(participantDto);
+        Participant participant = convertToEntity(participantDto);
         participant.setId(id);
         participant = participantRepository.save(participant);
-        return convertParticipantToDto(participant);
+        return convertToDto(participant);
     }
 
 
 
-    private Participant convertPartToEntity(ParticipantDto participantDto) {
+    private Participant convertToEntity(ParticipantDto participantDto) {
         Participant participant = new Participant();
         participant.setName(participantDto.getName());
         participant.setGender(Gender.valueOf(participantDto.getGender()));
@@ -90,7 +90,7 @@ public class ParticipantService {
         return participant;
     }
 
-    private ParticipantDto convertParticipantToDto(Participant participant) {
+    private ParticipantDto convertToDto(Participant participant) {
         ParticipantDto participantDto = new ParticipantDto();
         participantDto.setId(participant.getId());
         participantDto.setName(participant.getName());

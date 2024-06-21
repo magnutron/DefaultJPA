@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea04837f-a311-4032-863b-fa691500acc5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/enums/SortingDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/config/InitData.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/config/InitData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/DisciplineDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/dto/DisciplineDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/entity/Discipline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/DisciplineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/DisciplineService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ParticipantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DefaultJPA/src/main/java/org/example/defaultjpa/service/ResultService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +82,7 @@
       <workItem from="1718699916328" duration="128000" />
       <workItem from="1718866618395" duration="225000" />
       <workItem from="1718866853007" duration="27328000" />
+      <workItem from="1718929310238" duration="666000" />
     </task>
     <servers />
   </component>
